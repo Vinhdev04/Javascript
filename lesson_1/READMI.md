@@ -1,6 +1,6 @@
 ## Built-in trong Javascript:
 
-- Gi?i thi?u m?t s? hàm built-in:
+- Gi?i thi?u hàm built-in:
     + alert
     + console
     + confirm
