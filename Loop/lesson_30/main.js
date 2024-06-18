@@ -12,3 +12,22 @@ for (let n = 1; n <= 1000; n++) {
 }
 
 // Bài tập 7: Kiểm tra số nguyên tố
+while (true) {
+  let isNum = Number(prompt("Enter a number "));
+  while (!Number.isInteger(isNum) || isNum <= 0) {
+    isNum = Number(prompt("Again: "));
+  }
+  alert("Number is: " + isNum);
+  let isPrime = true;
+  for (let i = 2; i < isNum; i++) {
+    if (isNum % i === 0) {
+      isPrime = false;
+      break;
+    }
+  }
+  if (isPrime) {
+    alert(isNum + " is a prime number");
+  } else {
+    alert(isNum + " is not a prime number");
+  }
+}

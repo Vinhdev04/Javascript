@@ -15,3 +15,16 @@
         Viết một chương trình tính tổng của các số từ 1 đến n (n là số nguyên dương nhập từ bàn phím).
         Ví dụ: Nếu n = 5, tổng là 1 + 2 + 3 + 4 + 5 = 15.
 */
+
+//  bai1
+let n = Number(prompt("Nhập một số nguyên dương: "));
+while (!Number.isInteger(n) || n < 0) {
+  n = Number(prompt("Vui lòng nhập lại số nguyên dương: "));
+}
+let giaiThua = 1;
+for (let i = 1; i <= n; i++) {
+  giaiThua *= i;
+}
+alert("Giai thừa của " + n + " là: " + giaiThua);
+
+// bai2
