@@ -70,7 +70,8 @@ vd: let x = (a,b) => a\*b
 
 -> là hành vi của Js nhằm đi chuyển tất cả khai báo lên đầu phạm vi hiện tại (lên đầu tập lệnh hiện tại, hoặc hàm hiện tại, lên đầu block hiện tại)
 -> Hoisting là hành vi mặc định của JavaScript nhằm di chuyển tất cả các khai báo lên đầu phạm vi hiện tại (lên đầu tập lệnh hiện tại hoặc hàm hiện tại).
--> So sánh var, let, const:
+
+-> So sánh var, let, const
 
 1. var
    -> có thể sử dụng trước khi nó được khai báo trong mã lệnh
