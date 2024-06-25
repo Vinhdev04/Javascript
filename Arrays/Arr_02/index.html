@@ -4,9 +4,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="/Icon/icon16.webp" type="image/x-icon" />
-    <title>Document</title>
+    <title>Arrays in JS</title>
   </head>
   <body>
+    <p id="demo"></p>
     <script src="main.js"></script>
+    <script>
+      let arr6 = ["Banana", "Coffee", "Apple", "Orange"];
+      let resuil = "<ul>";
+      for (let i = 0; i < arr6.length; i++) {
+        resuil += "<li>" + arr6[i] + "</li>";
+      }
+      resuil += "</ul>";
+      document.getElementById("demo").innerHTML = resuil;
+    </script>
+    <script>
+      const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+      let text = "<ul>";
+      fruits.forEach(myFunction);
+      text += "</ul>";
+
+      document.getElementById("demo").innerHTML = text;
+
+      function myFunction(value) {
+        text += "<li>" + value + "</li>";
+      }
+    </script>
   </body>
 </html>

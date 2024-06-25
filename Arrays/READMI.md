@@ -34,6 +34,8 @@
    -> Sử dụng vòng for() -> có thể thực hiện các tacs vụ thêm sửa xóa
    -> Sử dụng vòng for of() -> chỉ có thể xem ko thể thao tác sửa
 
+<!-- -------------------------------- Array  Method  P1 --------------------- -->
+
 ## Làm việc với mảng:
 
 1. To String
@@ -42,29 +44,37 @@
    -> Tương tự hàm split() trong String
    -> join() -> dùng để chuyển từ number -> string và tùy chỉnh về khoảng cách
 
-3. Pop
-   -> Xóa element cuối mảng và trả về element đó
-   -> Nếu mảng trống hoặc ko còn phần tử -> trả về 'undefined'
-
-4. Push
-   -> Thêm phần tử(MỘT HOẶC NHIỀU) vào cuối mảng
+3. Push
+   -> Thêm phần tử vào cuối mảng gốc
    -> Sau đó trả về dộ dài mới của mảng
 
-5. Shirt
-   -> NGược lại với pop() , Shirt sẻ xóa phần tử đầu mảng và trả về elements đó
+4. Unshift
+   -> Ngược lại push()
+   -> Thêm phần tử vào đầu mảng gốc
+   -> Sau đó trả về dộ dài mới của mảng
+
+5. Pop
+   -> Xóa phần tử cuối mảng, làm thay đổi mảng gốc và trả về giá trị của phần tử đã bị loại bỏ
    -> Nếu mảng trống hoặc ko còn phần tử -> trả về 'undefined'
 
-6. Unshift
-   -> Tương tự push()
-   -> Thêm phần tử(MỘT HOẶC NHIỀU) vào cuối mảng
-   -> Sau đó trả về dộ dài mới của mảng
+6. Shirt
+   -> Ngược lại pop()
+   -> Xóa phần tử đầu tiên và trả về giá trị của phần tử đó
+   -> Nếu mảng trống hoặc ko còn phần tử -> trả về 'undefined'
+
 7. Splicing
    -> Xóa theo index(start, delet_Count)
    -> Thêm (x,y,z) -> x: vị trí , y: số lượng cần thêm, xóa, z: tên cần thêm
 
 8. Concat
    -> Nối mảng
-9. Slice
+
+9. Slice(startIndex,endIndex-1)
    -> cắt elements của mảng
-   -> > lấy phần tử trong mảng slice(start,end)
+   -> Lấy từ startIndex tới endIndex-1 chuỗi gốc (Ko bao gồm endIndex)
+   -> Bỏ trống sẻ hiểu là sao chép lấy toàn bộ mảng gốc sang mảng mới
    -> copy mảng
+
+10. includes()
+-> kiểm tra xem mảng có chứa 1 giá trị cụ thể hay ko . Trả về giá trị true or false
+<!-- -------------------------------- Array  Method  P2 --------------------- -->

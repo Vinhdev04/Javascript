@@ -45,3 +45,24 @@ for (let i of arr4) {
   }
 }
 console.log(`Số lượng số chẵn là ${count}`);
+
+// Duyệt mảng kết hợp html và js
+let arr5 = ["Banana", "Coffee", "Apple", "Orange"];
+let resuilt = "<ul>";
+for (let i = 0; i < arr5.length; i++) {
+  resuilt += "<li>" + arr5[i] + "</li>";
+}
+resuilt += "</ul>";
+
+// Duyệt mảng kết hợp html và js với ForEach(function)
+// const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+// let text = "<ul>";
+// fruits.forEach(myFunction);
+// text += "</ul>";
+
+// document.getElementById("demo").innerHTML = text;
+
+// function myFunction(value) {
+//   text += "<li>" + value + "</li>";
+// }
