@@ -1,10 +1,15 @@
 ### Arrays in JavaScript:
 
+-> Tập hợp các phần tử có cùng hoặc khác kiểu dữ liệu (dataType)
+-> Mảng giúp quản lý và tổ chức dữ liệu một cách hợp lý
+-> Truy xuất và thay đổi dữ liệu một cách dễ dàng
+
 ## Khởi tạo Mảng:
 
 1. Cách khởi tạo:
+   -> Khởi tạo mảng rỗng
    -> Sử dụng toán tử new()
-   -> Sử dụng cặp dấu ngoặc vuông []
+   -> Sử dụng cặp dấu ngoặc vuông [] -> ưu tiên sử dụng
    -> Sử dụng phương thức Array.from() -> Tạo mảng từ một chuỗi
    ->...
 
@@ -24,6 +29,10 @@
 
 3. Kiểm tra xem 1 đối tượng có phải là Array ko
    -> sử dụng câu lệnh Array.isArray()
+
+4. Duyệt mảng:
+   -> Sử dụng vòng for() -> có thể thực hiện các tacs vụ thêm sửa xóa
+   -> Sử dụng vòng for of() -> chỉ có thể xem ko thể thao tác sửa
 
 ## Làm việc với mảng:
 
