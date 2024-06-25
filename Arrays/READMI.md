@@ -78,3 +78,23 @@
 10. includes()
 -> kiểm tra xem mảng có chứa 1 giá trị cụ thể hay ko . Trả về giá trị true or false
 <!-- -------------------------------- Array  Method  P2 --------------------- -->
+11. indexOf()
+    -> Trả về vị trí index cảu phần tử xuất liện lần đầu tiên trong mảng
+    -> Ko tìm thấy trả về -1
+
+12. lastIndexOf():
+    -> Trả về vị trí index của phần tử xuất hiện cuối cùng trong mảng
+    -> Ko tìm thấy trả về -1
+
+13. reverse():
+    -> Đảo ngược thứ tư cảu mảng gốc
+    -> Thay đổi mảng gốc và ko tạo ra mảng mới
+
+14.join(separator):
+-> Nối các phần tử trong mảng thành chuỗi, theo ký tự phân tách 'separtor'
+-> separator: Nếu bỏ trống sẻ mặc định là dấu ,
+-> Ko thay đổi mảng gốc
+
+## Mở rộng slice():
+
+<!-- -------------------------------- Array  Method  P3 --------------------- -->
