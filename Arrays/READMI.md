@@ -98,3 +98,56 @@
 ## Mở rộng slice():
 
 <!-- -------------------------------- Array  Method  P3 --------------------- -->
+
+15. splice(start, deleteCount, item1, item2, ..)
+    -> (start, deleteCount, item1, item2, ..)
+    -> splice (start, deleteCount, item1, item2, ..):
+    -> start: Chỉ mục bắt đầu thực hiện thay đổi mảng.
+    deleteCount: Số lượng phần tử cần xóa từ start.
+    item1, item2, ...: Các phần tử sẽ được thêm vào mảng từ start.
+
+16. toSpiced()
+    -> tương tự splice ()
+    -> ES2023 Nhưng giữ nguyên mảng ban đầu phương thức mới tạo ra một mảng mới, giữ nguyên mảng ban đầu, trong khi phương thức cũ thay đổi mảng ban đầu
+
+17. slice(begin, end)
+    -> begin: Chỉ mục bắt đầu sao chép (bao gồm).
+    end (tùy chọn): Chỉ mục kết thúc sao chép (không bao gồm).
+
+18. delete() - > xóa
+    -> không khuyến khích sử dụng nhiều tránh xảy ra nhiều lỗ hổng
+    -> thay vào đó nên sử dụng pop () và shift ()
+    -> Lưu ý: Khi sử dụng delete()
+    -> phần tử sẻ ko bị xóa hoàn toàn mà bị đánh dấu là "empty"
+    -> Phần tử chỉ được loại bỏ mà mảng vẫn giữ nguyên độ dài
+    -> nếu duyệt vòng lặp (for..in hoặc for .. òf) việc sử dụng delete() các phần tử vẫn xuất hiện trong vòng lặp với giá trị
+
+19. copyWithin(target, start, end-1)
+    -> sử dụng để sao chép một phần của mảng và chèn nó vào vị trí khác trong mảng mà không thay đổi độ dài của mảng.
+    -> target: Chỉ mục của mảng nơi bạn muốn bắt đầu chèn các phần tử sao chép.
+    start: Chỉ mục của mảng mà bạn muốn bắt đầu sao chép các phần tử.
+    end-1 (tùy chọn): Chỉ mục kết thúc sao chép. Phương thức sẽ sao chép từ start đến end - 1
+    -> Phương thức copyWithin() ghi đè các giá trị hiện có.
+
+        -> Phương thức copyWithin() không thêm phần tử vào mảng.
+
+        -> Phương thức copyWithin() không thay đổi độ dài của mảng.
+
+20. flat()
+    -> Phương thức này thực hiện việc biến đổi một mảng nhiều chiều (mảng có các mảng lồng nhau) thành một mảng một chiều (mảng không còn các mảng lồng nhau).
+
+### Lưu ý:
+
+## splice (start, deleteCount, item1, item2, ..):
+
+-> splice(start, deleteCount, item1, item2, ...)
+-> start: Chỉ mục bắt đầu thực hiện thay đổi mảng.
+deleteCount: Số lượng phần tử cần xóa từ start.
+item1, item2, ...: Các phần tử sẽ được thêm vào mảng từ start.
+
+## slice (begin, end)
+
+-> begin: Chỉ mục bắt đầu sao chép (bao gồm).
+end (tùy chọn): Chỉ mục kết thúc sao chép (không bao gồm).
+
+-> được sử dụng để sao chép một phần của mảng và trả về một mảng mới, mà không thay đổi mảng ban đầu
