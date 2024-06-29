@@ -151,3 +151,11 @@ item1, item2, ...: Các phần tử sẽ được thêm vào mảng từ start.
 end (tùy chọn): Chỉ mục kết thúc sao chép (không bao gồm).
 
 -> được sử dụng để sao chép một phần của mảng và trả về một mảng mới, mà không thay đổi mảng ban đầu
+
+<!-- -------------------------------- Search Method  P1 --------------------- -->
+
+<!-- -------------------------------- Search Method  P2 --------------------- -->
+
+<!-- -------------------------------- Sort  Method  P1 --------------------- -->
+
+<!-- -------------------------------- Sort  Method  P2 --------------------- -->
