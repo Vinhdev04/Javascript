@@ -152,6 +152,17 @@ end (tùy chọn): Chỉ mục kết thúc sao chép (không bao gồm).
 
 -> được sử dụng để sao chép một phần của mảng và trả về một mảng mới, mà không thay đổi mảng ban đầu
 
+## spread(...)
+
+-> Là 1 toán tử mới được thêm vào từ ES6
+-> Cho phép duyệt qua lần lượt các phần tử -> có thể thao tác:
+
+1.  Tạo bản sao(clone) của mảng -> bản chính ko bị ảnh hưởng khi tác động vào bản sao
+2.  Truyền đối số vào hàm
+3.  Kết hợp mảng
+4.  Tạo mảng mới thêm phần tử
+5.  Chuyển đổi iterable (có thể duyệt qua: string,arr) thành mảng -> Ko thể tách đối với mảng chứa duy nhất 1 phần tử là chuỗi,đảm bảo rằng chuỗi đó là một giá trị chuỗi nguyên thủy và không được bọc trong một mảng.
+
 <!-- -------------------------------- Search Method  P1 --------------------- -->
 
 <!-- -------------------------------- Search Method  P2 --------------------- -->
