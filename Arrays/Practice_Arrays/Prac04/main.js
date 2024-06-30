@@ -17,3 +17,18 @@
   -> Tìm kiếm phần tử
   -> Tạo một mảng các số nguyên và viết hàm tìm kiếm một phần tử trong mảng và trả về vị trí của nó (nếu có), sau đó in ra kết quả.
 */
+
+let arr1 = [1, 2, 3, 4, 5, 6];
+let removerArr = arr1.pop();
+console.log(arr1); // Output: 1 2 3 4 5
+console.log(removerArr); // Output: delete[6]
+let replaceArr = [...arr1, 7];
+console.log(replaceArr); // Output: 1 2 3 4 5 7
+
+let arr2 = [0, 2, 4, 6, 8, 10];
+let reverseArr = arr2.reverse();
+console.log(reverseArr); // Output: 10 8 6 4 2 0
+
+let arr3 = [0, 2, 4, 6, 8, 10, -2, 44, -90];
+let sortArr = arr3.sort();
+console.log(sortArr); // Output: -2 -90 0 10 2 4 44 6 8
