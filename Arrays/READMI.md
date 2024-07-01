@@ -169,4 +169,51 @@ end (tùy chọn): Chỉ mục kết thúc sao chép (không bao gồm).
 
 <!-- -------------------------------- Sort  Method  P1 --------------------- -->
 
-<!-- -------------------------------- Sort  Method  P2 --------------------- -->
+## Syntax:
+
+-> sort() -> sort tăng
+
+## array.sort(compareFunction) :
+
+      -> Theo mặc định, hàm Sort() sắp xếp các giá trị dưới dạng chuỗi.
+      # array: Mảng cần được sắp xếp
+      # compareFunction(tùy chọn): hàm so sánh được sử dụng để xác định thứ tự sắp xếp. Nếu ko cung cấp sort()
+
+## sắp xếp các phần tử dưới dạng chuỗi Unicode
+
+      # Hàm so sánh (compareFunction):
+      # Nếu compareFunction được cung cấp , nó sẻ nhận 2 đối số được gọi là a,b
+      # Nếu compareFunction(a,b) trả về value < 0 => a sẻ đặt trước b
+      # Nếu compareFuncion(a,b) trả về value = 0 => a và b ko đổi
+      # Nếu compareFunction(a,b) trả về value > 0 => b đặt trước a
+
+=> phương thức sort() thay đổi mảng ban đầu.
+
+## Phương thức toSorted() -> ES2023
+
+==> đã thêm phương thức toSorted() như một cách an toàn để sắp xếp một mảng mà không làm thay đổi mảng ban đầu.
+
+## Sort() và toSorted():
+
+=> Sự khác biệt giữa toSorted() và Sort() là phương thức đầu tiên tạo một mảng mới, giữ nguyên mảng ban đầu,
+=> trong khi phương thức cuối cùng thay đổi mảng ban đầu.
+
+<!-- -------------------------------- Reverse Method  P2 --------------------- -->
+
+### Reverse() và toReverse():
+
+## Reverse()
+
+-> đảo ngược mảng
+-> trong khi phương thức reverse() cuối cùng thay đổi mảng ban đầu.
+
+## toReversed():
+
+-> đảo ngược mảng
+-> Sự khác biệt giữa toReversed() là phương thức đầu tiên tạo ra một mảng mới, giữ nguyên mảng ban đầu,
+
+## Reverse() và toReversed():
+
+-> ES2023 đã thêm phương thức toReversed() như một cách an toàn để đảo ngược một mảng mà không làm thay đổi mảng ban đầu.
+=> Sự khác biệt giữa toReversed() là phương thức đầu tiên tạo ra một mảng mới, giữ nguyên mảng ban đầu,
+=> trong khi phương thức reverse() cuối cùng thay đổi mảng ban đầu.
