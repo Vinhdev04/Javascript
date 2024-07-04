@@ -291,9 +291,13 @@ end (tùy chọn): Chỉ mục kết thúc sao chép (không bao gồm).
 
 ### Filter(callback):
 
+-> array.filter(function)
+
 # Mục đích:
 
 -> Tạo một mảng mới với các phần tử của mảng gọi thỏa mãn một điều kiện được cung cấp.
+-> Ko làm thay đổi mảng ban đàu
+-> Ko thức hiện đối với hàm rỗng (phần tử)
 
 # Cú pháp: array.filter(callback)
 
@@ -305,9 +309,12 @@ end (tùy chọn): Chỉ mục kết thúc sao chép (không bao gồm).
 
 ### Map(callback):
 
+s
+
 # Mục đích:
 
 -> Tạo một mảng mới được lấp đầy bằng kết quả của việc gọi một hàm được cung cấp lên từng phần tử trong mảng gọi.
+-> Trích lọc các phần tử thỏa mãn điều kiện của hàm
 
 # Cú pháp: array.map(callback)
 
