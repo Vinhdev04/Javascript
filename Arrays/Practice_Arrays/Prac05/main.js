@@ -1,5 +1,5 @@
 // Bài tập vận dụng;
-/* Viết chương trình nhập vào 1 mảng số nguyên gồm n phần tử nhập từ bàn phím:
+/* Viết ham nhập vào 1 mảng số nguyên gồm n phần tử nhập từ bàn phím:
 a. Xuất các giá trị trong mảng
 b. Đảo ngược mảng, xuất kết quả
 c. Sắp xếp mảng
@@ -35,7 +35,7 @@ console.log(arr);
 console.log(`Các giá trị của mảng: ${arr}`);
 
 // b. Đảo ngược mảng, xuất kết quả
-let arrReverse = arr.reverse();
+let arrReverse = arr.slice().reverse();
 console.log(`Mảng sau khi đảo ngược là: ${arrReverse}`);
 
 // c. Sắp xếp mảng -> dùng sort(arrow function)
