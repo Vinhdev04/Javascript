@@ -324,3 +324,17 @@ s
   # index: Chỉ số của phần tử hiện tại.
   # array: Mảng mà map được gọi.
   <!-- ---------------------------------------------------------------------------------------- -->
+
+### forEach():
+
+-> Sử dụng như in ra giá trị của từng phần tử, thêm các giá trị vào một mảng khác, hoặc thay đổi các biến bên ngoà
+-> không trả về một giá trị có ý nghĩa để sử dụng trong bất kỳ mục đích nào khác
+-> không thể dùng để nối chuỗi
+
+# Cú pháp: forEach(callbackfn(),thisValue):
+
+- Tham số:
+  # element: phần tử đang được xét đến
+  # index: vị trí phần tử đang xẻt
+  # array: mảng truyền vào
+  # thisValue(option)
