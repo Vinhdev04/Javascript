@@ -19,8 +19,20 @@
 -> continue():
 => Bỏ qua 1 giá trị trong vòng lặp
 
-## Khái quát:
+### Loop (P2):
 
-## Sử dụng:
+# For()
 
-## Tối ưu:
+-> Lặp với điều kiện đúng
+
+# For/in()
+
+-> Lặp qua key của đối tượng
+
+# while()
+
+-> Lặp khi điều kiện đúng
+
+# do while()
+
+-> Lặp ít nhất 1 lần, sau đó lặp khi điều kiện đúng
