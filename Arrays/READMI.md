@@ -309,8 +309,6 @@ end (tùy chọn): Chỉ mục kết thúc sao chép (không bao gồm).
 
 ### Map(callback):
 
-s
-
 # Mục đích:
 
 -> Tạo một mảng mới được lấp đầy bằng kết quả của việc gọi một hàm được cung cấp lên từng phần tử trong mảng gọi.
@@ -338,3 +336,15 @@ s
   # index: vị trí phần tử đang xẻt
   # array: mảng truyền vào
   # thisValue(option)
+
+## some(callback):
+
+-> every(function ()) -> Kiểm tra tất cả các phần tử của mảng phải thỏa mãn 1 điều kiện bất kì nào đó -> true / false
+
+### every()
+
+-> some(function ()) -> Kiểm một trong các phần tử của mảng phải thỏa mãn 1 điều kiện bất kì nào đó -> true / false
+
+## find(callback)
+
+-> find(function ()) -> Tìm và trả về phần tử đầu tiên của mảng thỏa mãn điều kiện -> undefined nếu không tìm thấy. Và luôn trả về 1 phần tử tìm thấy trong số các phần tử trùng nhau
