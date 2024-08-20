@@ -19,3 +19,25 @@ function myFunction(element, index) {
   arr2[index] = element * 2;
 }
 console.log(arr2); // Output: 0 4 8 12 16 20
+
+let classRoom = [
+  {
+    name: "John",
+    age: 18,
+    gender: "male",
+  },
+  {
+    name: "Ane",
+    age: 16,
+    gender: "female",
+  },
+  {
+    name: "Hana",
+    age: 16,
+    gender: "female",
+  },
+];
+
+classRoom.forEach(function (list, index) {
+  console.log("Index: " + index, list);
+});
