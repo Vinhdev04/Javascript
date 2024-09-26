@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/Icon/icon16.webp" type="image/x-icon" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+      }
+      button {
+        padding: 15px 30px;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+        font-weight: 500;
+        font-size: 20px;
+        cursor: pointer;
+        margin: 10px;
+      }
+      button:hover {
+        opacity: 0.7;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Inline -->
+    <button onclick="alert('Hello !...')">Click me</button>
+
+    <!-- Internal -->
+    <button>Hover me</button>
+    <script>
+      var button = document.querySelector("button");
+      button.onclick = function () {
+        alert("Hello!...");
+      };
+    </script>
+
+    <!-- External -->
+    <script src="index.js"></script>
+  </body>
+</html>
