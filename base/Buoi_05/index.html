@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/Icon/icon16.webp" type="image/x-icon" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f1f1f1;
+        flex-wrap: wrap;
+      }
+      button {
+        margin: 10px 20px;
+        outline: none;
+        border: none;
+        padding: 10px 20px;
+        font-size: 2rem;
+        color: #fff;
+        font-weight: 500;
+        background: olive;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: 0.3s all;
+        min-width: 200px;
+      }
+
+      button:hover {
+        background: darkolivegreen;
+        transform: translateY(-10px);
+      }
+    </style>
+  </head>
+  <body>
+    <script src="index.js"></script>
+    <button onclick="openTab()">Open Tab</button>
+    <button onclick="closeTab()">Close Tab</button>
+    <button onclick="getInfor()">Get href</button>
+    <button onclick="getPreviousPage()">Previous Tab</button>
+    <button onclick="getNextPage()">Next Tab</button>
+    <button onclick="getReloadPage()">Reload</button>
+    <button onclick="getCookies()">GetCookies</button>
+    <button onclick="upDateCookies()">upDateCookies</button>
+    <button onclick="deleteCookies()">deleteCookies</button>
+  </body>
+</html>
