@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/Icon/icon16.webp" type="image/x-icon" />
+    <title>DOM</title>
+    <style>
+      .light {
+        background-color: aquamarine;
+      }
+
+      .dark {
+        background-color: bisque;
+      }
+
+      .parent .child h2 .link {
+        background-color: blueviolet;
+        color: #fff;
+      }
+
+      .parent .child h2 .link.active {
+        background-color: yellow;
+        color: #000;
+      }
+
+      .parent .child h2 .link.test {
+        background-color: pink;
+        color: #000;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="color: red">Làm việc với DOM Part1</h1>
+    <a href="#">Home Page</a>
+    <div class="light" id="content">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim blanditiis
+      adipisci, reiciendis odio totam distinctio. Debitis, rerum quasi inventore
+      reiciendis, a voluptatibus possimus dolore voluptatem quam natus odio
+      nobis laboriosam?
+    </div>
+    <div class="light" id="content">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim blanditiis
+      adipisci, reiciendis odio totam distinctio. Debitis, rerum quasi inventore
+      reiciendis, a voluptatibus possimus dolore voluptatem quam natus odio
+      nobis laboriosam?
+    </div>
+    <div class="light" id="content">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim blanditiis
+      adipisci, reiciendis odio totam distinctio. Debitis, rerum quasi inventore
+      reiciendis, a voluptatibus possimus dolore voluptatem quam natus odio
+      nobis laboriosam?
+    </div>
+    <div class="light" id="content">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim blanditiis
+      adipisci, reiciendis odio totam distinctio. Debitis, rerum quasi inventore
+      reiciendis, a voluptatibus possimus dolore voluptatem quam natus odio
+      nobis laboriosam?
+    </div>
+
+    <ul id="list">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+
+    <div class="text">
+      <p class="text-txt">Lorem ipsum dolor sit amet.</p>
+      <p class="text-txt">Lorem ipsum dolor sit amet.</p>
+      <span class="text-txt">Lorem ipsum dolor sit amet.</span>
+      <span class="text-txt">Lorem ipsum dolor sit amet.</span>
+      <p class="text-txt">Lorem ipsum dolor sit amet.</p>
+    </div>
+
+    <div class="parent">
+      <div class="child">
+        <h2>
+          <a href="#" class="link">This is heading 1</a>
+        </h2>
+        <h2>
+          <a href="#" class="link">This is heading 2</a>
+        </h2>
+        <h2>
+          <a href="#" class="link">This is heading 3</a>
+        </h2>
+        <h2>
+          <a href="#" class="link">This is heading 4</a>
+        </h2>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
