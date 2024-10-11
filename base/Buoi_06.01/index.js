@@ -12,7 +12,7 @@ const box = document.querySelector("#box");
 box.innerHTML = newText;
 console.log(box);
 
-// ---------- Phân biệt innerHTML và textContent và innerText----------
+// ---------- Phân biệt innerHTML và textContent và innerText ----------
 const myText = document.querySelector(".text-demo");
 console.log(myText);
 

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/Icon/icon16.webp" type="image/x-icon" />
+    <title>DOM EVENT</title>
+    <style>
+      body {
+        margin: 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      .focus {
+        background-color: yellow;
+        color: #fff;
+      }
+
+      .menu {
+        background: orchid;
+        width: 250px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        display: none;
+      }
+
+      .menu.show {
+        display: block;
+      }
+
+      .menu ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        margin-top: 30px;
+      }
+
+      .menu ul li {
+        padding: 10px;
+        cursor: pointer;
+        border-bottom: 1px solid #0000002d;
+      }
+
+      .menu .close {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+
+      .btn {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="color: red">LÀM VIỆC VỚI DOM EVENT</h1>
+    <!-- EX: onload -->
+    <ul id="list">
+      <li>Mục 1</li>
+      <li>Mục 2</li>
+      <li>Mục 3</li>
+    </ul>
+
+    <!-- EX: onblur -->
+    <input type="text" name="" id="inputName" placeholder="Enter your name" />
+
+    <!-- EX: onkeydown and onkeyup -->
+    <textarea
+      name=""
+      id="inputText"
+      cols="10"
+      rows="10"
+      style="display: block; margin-top: 60px"
+    ></textarea>
+
+    <!-- EX: onclick -->
+    <div id="menu" class="menu">
+      <button class="close" id="btnClose">Close</button>
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+    </div>
+    <button class="btn" id="btnMenu">Menu</button>
+
+    <!-- EX: onchange -->
+    <select name="" id="colors">
+      <option value="red">Màu đỏ</option>
+      <option value="yellow">Màu vàng</option>
+      <option value="white">Màu trắng</option>
+      <option value="black">Màu đen</option>
+    </select>
+    <script src="index.js"></script>
+  </body>
+</html>
