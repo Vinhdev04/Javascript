@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/Icon/icon16.webp" type="image/x-icon" />
+    <title>Practice DOM</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+      }
+
+      .content {
+        border: 1px solid #e0d9d9;
+        padding: 20px 30px;
+        border-radius: 20px;
+        text-align: justify;
+        font-weight: 400;
+        font-size: 20px;
+        max-width: 500px;
+        margin-bottom: 50px;
+        margin-top: 50px;
+      }
+
+      .control button {
+        margin: 0 20px;
+        padding: 15px 20px;
+        border-radius: 20px;
+        border: none;
+        outline: none;
+        color: #fff;
+        font-weight: 500;
+        background: #3498db;
+        cursor: pointer;
+        transition: 0.2s linear;
+      }
+      #btn_show_one:hover,
+      #btn_show_two:hover {
+        background: #2980b9;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Thay đổi nội dung của thẻ HTML</h2>
+    <div class="content">
+      Tình yêu và thất tình là hai mặt của cùng một đồng xu, mỗi bên đều mang
+      đến những cảm xúc sâu sắc và trải nghiệm riêng biệt. Trong khi tình yêu là
+      nguồn động viên và niềm hạnh phúc, mang lại cho ta cảm giác trọn vẹn và
+      kết nối, thì thất tình lại là những cơn sóng dữ dội, làm xô đẩy ta vào
+      những khoảng trống và nỗi đau. Cả hai đều là những bài học quý giá trong
+      hành trình sống, giúp ta hiểu rõ hơn về giá trị của tình cảm, bản thân và
+      những mối quan hệ xung quanh. Khi ta yêu, ta dám mở lòng; khi ta thất
+      tình, ta học cách đứng dậy và tiếp tục bước tiếp.
+    </div>
+    <div class="control">
+      <button id="btn_show_one">Show Message 1</button>
+      <button id="btn_show_two">Show Message 2</button>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

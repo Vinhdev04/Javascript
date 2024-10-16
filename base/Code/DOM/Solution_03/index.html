@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/Icon/icon16.webp" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <title>Practice DOM</title>
+    <style>
+      body {
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      button {
+        padding: 15px 40px;
+        outline: none;
+        border: none;
+        border-radius: 20px;
+        color: #fff;
+        font-weight: 500;
+        background-color: chocolate;
+        cursor: pointer;
+        transition: 0.2s linear;
+        margin-top: 50px;
+      }
+      button#btn_hide {
+        background-color: blueviolet;
+        margin-left: 20px;
+      }
+      button:hover {
+        opacity: 0.8;
+      }
+
+      .content {
+        border: 1px solid #aeaeae;
+        border-radius: 20px;
+        overflow: hidden;
+        padding: 30px 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 10px;
+        background-color: blanchedalmond;
+        display: none;
+      }
+
+      .content div img {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        object-position: center;
+        background-repeat: no-repeat;
+        border-radius: 50%;
+        padding: 10px 20px;
+      }
+
+      .bold {
+        font-weight: bold;
+      }
+
+      p.desc {
+        margin-right: 10px;
+        margin-left: 10px;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>In ra thông báo khi click vào button</h2>
+    <div class="content" id="content">
+      <div>
+        <img src="./avatar-gau-cute.jpg" alt="" />
+      </div>
+      <div>
+        <p class="desc bold">Phạm Công Vinh</p>
+      </div>
+      <div>
+        <i class="fa-brands fa-github"></i>
+      </div>
+    </div>
+    <div>
+      <button id="btn_show">Show</button>
+      <button id="btn_hide">Hide</button>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

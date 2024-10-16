@@ -1,0 +1,56 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+h1 {
+  display: block;
+  margin: 100px 30px;
+}
+table {
+  margin-bottom: 50px;
+}
+
+.container {
+  display: flex;
+}
+
+button {
+  color: #fff;
+  font-weight: 500;
+  margin: 10px;
+  padding: 15px 30px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.2s linear;
+}
+
+button:hover {
+  opacity: 0.7;
+  transform: translateY(-10px);
+}
+
+button:active {
+  border: yellow;
+}
+
+button#btn_add_first {
+  background-color: cadetblue;
+}
+
+button#btn_add_end {
+  background-color: rgb(99, 168, 29);
+}
+
+button#btn_remove_first {
+  background-color: blueviolet;
+}
+
+button#btn_remove_end {
+  background-color: chocolate;
+}

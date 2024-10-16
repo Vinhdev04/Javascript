@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/Icon/icon16.webp" type="image/x-icon" />
+    <title>Practice DOM</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+      }
+      div img {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 30px;
+      }
+
+      .control button {
+        margin-left: 20px;
+        padding: 15px 30px;
+        border-radius: 20px;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        font-weight: 500;
+        font-size: 20px;
+        color: #fff;
+        background-color: cadetblue;
+        transition: 0.3s all;
+      }
+
+      button.btn-reset {
+        background-color: rgb(32, 106, 202);
+      }
+      button:hover {
+        opacity: 0.7;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Thay đổi background bằng DOM</h2>
+    <div>
+      <img
+        src="./avatar-cute-cho-co-nang-nghien-tra-sua.jpg"
+        alt="Image"
+        id="img"
+      />
+    </div>
+    <div class="control">
+      <button class="btn-replace">Replace</button>
+      <button class="btn-reset">Reset</button>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
