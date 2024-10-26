@@ -62,3 +62,14 @@ document.onkeydown = function (e) {
       break;
   }
 };
+
+// onkeypress -> nhấn dữ
+document.onkeypress = function (e) {
+  console.log(e.which);
+
+  switch (e.which) {
+    case 27:
+      console.log("Do you want exit?");
+      break;
+  }
+};

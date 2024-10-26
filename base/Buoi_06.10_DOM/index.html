@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/Icon/icon16.webp" type="image/x-icon" />
+    <title>DOM</title>
+    <style>
+      ul {
+        display: none;
+      }
+      input:focus ~ ul {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Example 01: -->
+    <a href="https://f8.edu.vn">Get now</a><br />
+    <a href="https://google.com.vn">Search now</a>
+
+    <!-- Example 02: -->
+    <input type="text" name="" id="" placeholder="Search" />
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JAVASCRIPT</li>
+    </ul>
+
+    <!-- Example 03: -->
+    <div>
+      Content
+      <button>Click me!</button>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
