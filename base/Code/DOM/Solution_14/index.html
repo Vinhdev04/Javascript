@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/Icon/icon16.webp" type="image/x-icon" />
+    <title>Event Capturing (bắt giữ)</title>
+    <style>
+      div {
+        border: red 2px solid;
+      }
+      #grandparent {
+        width: 90vw;
+        background-color: #f1f1f1;
+      }
+      #parent {
+        width: 70vw;
+        background-color: cyan;
+      }
+      #child {
+        width: 50vw;
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="grandparent">
+      <p>Grand parent</p>
+      <div id="parent">
+        <p>parent</p>
+        <div id="child">
+          <p>child</p>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
