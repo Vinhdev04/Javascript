@@ -1,0 +1,49 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-flow: column;
+}
+
+#form {
+  border: 1px solid #b62424;
+  padding: 40px 80px;
+  border-radius: 10px;
+  background-color: #f0f0f0;
+  max-width: 900px;
+  margin-bottom: 10px;
+  height: 150px;
+  display: grid;
+  place-items: center;
+}
+
+input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input::placeholder {
+  color: #b62424;
+}
+
+#btn {
+  padding: 10px 20px;
+  background-color: #24b692;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s linear;
+}
+
+#btn:hover {
+  background-color: #2196f3;
+}
+
+ul {
+  list-style-type: circle;
+}
