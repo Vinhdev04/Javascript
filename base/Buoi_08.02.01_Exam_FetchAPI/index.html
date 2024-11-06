@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/Icon/icon16.webp" type="image/x-icon" />
+    <title>Fetch API in JS</title>
+    <style>
+      #title {
+        color: red;
+        font-weight: bold;
+        font-size: 20px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      #title:hover {
+        color: blue;
+      }
+
+      .product-list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        background: beige;
+        cursor: pointer;
+        transition: 0.3s all linear;
+      }
+
+      .product-item {
+        background: rgb(31, 167, 190);
+        border-radius: 10px;
+        padding: 10px;
+        margin: 10px;
+        transition: 0.3s all linear;
+      }
+
+      .product-item:hover {
+        background: yellow;
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
+  <body>
+    <marquee behavior="" direction="" id="title"
+      >Fetch API in Js - Part 2</marquee
+    >
+    <div class="product-list" id="products"></div>
+
+    <!-- <div class="product-item">
+      <img src="" alt="" />
+      <h3 class="title"></h3>
+      <p class="price"></p>
+    </div> -->
+    <script src="index.js"></script>
+  </body>
+</html>
