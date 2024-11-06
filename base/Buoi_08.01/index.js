@@ -27,3 +27,25 @@ promise
   .finally(() => {
     console.log("Finally block");
   });
+
+// -------------- Example status Promise --------------------------------
+const promises = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    //resolve(); // success
+    reject(); // failure
+  }, 3000);
+});
+
+console.log(promises); //
+setTimeout(() => {
+  console.log(promises); // status: pending
+}, 1000);
+
+setTimeout(() => {
+  console.log(promises); // status: pending
+}, 2000);
+
+setTimeout(() => {
+  // console.log(promises); // status: fullfilled: undefined
+  console.log(promises); // status: rejected: undefined
+}, 3000);

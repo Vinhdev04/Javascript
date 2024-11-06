@@ -42,3 +42,32 @@ promise
 # Rejected:
 
 -> Khi promise bị lỗi thì sẻ ở trạng thái này -> kết quả "object" lỗi
+
+### Promise.all
+
+-> Promise.all -> giúp cho các promise được thức thi song song với nhau, tổng thời gian chạy cảu các chương trình chỉ bằng thời gian chạy cảu promise chạy lâu nhất
+
+### Syntax Promise.all
+
+Promise.all([promise1,promise2,...])
+.then(([success1,success2])=> {
+// code
+})
+.catch((error)=>{
+// code
+})
+.finally(()=>{
+// auto
+})
+
+## Lưu ý khi sử dụng Promise.all
+
+-> Nếu một trong các promise bị reject -> chương trình sẻ chạy vào catch ngay lập thức
+
+# Ứng dụng của Promise.all
+
+- Gửi nhiều mail đồng thời: Cách thông thường dùng vòng lặp để lặp từng mail xong gửi đi -> dùng promise gửi song song các email
+  VD: 1 mail -> 1s => 10 mail -> 10s
+  Promise.all : 1s-> 10 mail
+
+  ->Lấy nhiều API: Gỉa sử muốn lấy nhiều API và các API độc lập với nhau thì dùng promise.all -> giảm thời gian
