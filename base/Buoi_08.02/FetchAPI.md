@@ -35,3 +35,20 @@ console.log(error)
 ## API tham khảo:
 
 # https://dummyjson.com/docs/products#products-category_list
+
+## ------------------- Async / Await --------------------------------
+
+## Async / Await
+
+-> Là một tính năng của Javascript giúp chúng ta làm việc với các hàm bất đồng bộ theo cách dễ hiểu
+-> được xây dựng dựa trên Promise
+
+# Async: khai báo một hàm bất đồng bộ
+
+-> Tự động biến đổi một hàm thông thường thành một Promise
+-> Từ khóa Async được đặt trước 1 hàm
+
+## Await: tạm dừng việc thức hiện các hàm async
+
+-> Khi được đặt trước một Promise, nó sẻ đợi cho đến khi Promise kết thúc và trả về kết quả
+-> Await chỉ có thể sử dụng bên trong các hàm async
