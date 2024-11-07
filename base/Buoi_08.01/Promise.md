@@ -71,3 +71,11 @@ Promise.all([promise1,promise2,...])
   Promise.all : 1s-> 10 mail
 
   ->Lấy nhiều API: Gỉa sử muốn lấy nhiều API và các API độc lập với nhau thì dùng promise.all -> giảm thời gian
+
+## Promise
+
+# promise.resolve() -> luôn trả về 1 result success
+
+# promise.reject() -> luôn trả về 1 result failure
+
+# promise.all() -> thức thi song song
