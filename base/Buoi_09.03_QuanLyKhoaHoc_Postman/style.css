@@ -1,0 +1,56 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#list-courses {
+  list-style: auto;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+li {
+  color: rgb(54, 54, 165);
+}
+.content {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+button {
+  padding: 10px 40px;
+  color: #fff;
+  background-color: cadetblue;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: 0.4s all linear;
+  text-align: center;
+}
+
+input {
+  width: 100%;
+  color: #000;
+  outline: none;
+  border-radius: 14px;
+  border: none;
+  background-color: #ddd;
+  height: 30px;
+  padding: 5px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #4caf50;
+  opacity: 0.8;
+}
+
+#btn-add {
+  text-align: center;
+}
