@@ -1,13 +1,19 @@
 // So sánh "Rest parameters" và "Spread"
-// 1. Toán tử rest dùng để gom các phần tử còn lại vào trong một mảng hoặc đối tượng. Nó được sử dụng trong các function để thu thập các tham số dư thừa hoặc trong các cấu trúc đối tượng để gom nhóm các thuộc tính còn lại.
 
+/* 1. Toán tử rest dùng để gom các phần tử còn lại vào trong một mảng 
+        hoặc đối tượng. Nó được sử dụng trong các function
+        để thu thập các tham số dư thừa hoặc trong các cấu trúc 
+        đối tượng để gom nhóm các thuộc tính còn lại.
+*/
 function sum(...numbers) {
   return numbers.reduce((total, num) => total + num, 0);
 }
 
 console.log(sum(1, 2, 3, 4)); // Output: 10
 
-// Trong destructuring (rest object/array): Thu thập các phần tử còn lại vào trong mảng hoặc đối tượng.
+/* Trong destructuring (rest object/array): 
+      thu thập các phần tử còn lại vào trong mảng hoặc đối tượng.
+*/
 
 // 1. Với mảng:
 const [first, second, ...rest] = [1, 2, 3, 4, 5];
@@ -26,8 +32,11 @@ console.log(name); // 'John'
 console.log(age); // 30
 console.log(otherInfo); // { country: 'USA', city: 'NY' }
 
-// 2. Toán tử spread dùng để tách các phần tử của một mảng hoặc đối tượng thành các phần tử riêng biệt. Nó thường được sử dụng để sao chép mảng/đối tượng hoặc kết hợp các phần tử của mảng/đối tượng.
-
+/* 2. Toán tử spread dùng để tách các phần tử của một mảng 
+      hoặc đối tượng thành các phần tử riêng biệt. 
+      Nó thường được sử dụng để sao chép mảng/đối tượng 
+      hoặc kết hợp các phần tử của mảng/đối tượng.
+*/
 const arr1 = [1, 2, 3];
 const arr2 = [4, 5, 6];
 const combined = [...arr1, ...arr2];
