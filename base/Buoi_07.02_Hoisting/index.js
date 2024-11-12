@@ -2,12 +2,12 @@
 // -> JavaScript tự động di chuyển toàn bộ các khai báo lên đầu chương trình
 // -> những dòng code có sử dụng biến mà chưa khai báo sẻ không bị lỗi
 
-//console.log(a); // undefined
+// console.log(a); // undefined
 // let a;
 
-let x;
-console.log(x); // undefined
-x = 10;
+// let x;
+// console.log(x); // undefined
+// x = 10;
 
 // const b;
 // console.log(b); //  Missing initializer in const declaration
@@ -20,9 +20,9 @@ let c1 = sum(a1, b1);
 console.log(c1); // 30
 
 // 1. Declaration function -> hoisting
-// function sum(x1, y1) {
-//   return x1 + y1; // 30
-// }
+function sum(x1, y1) {
+  return x1 + y1; // 30
+}
 
 // 2. Expression function -> not hoisting
 var sum = function (x, y) {

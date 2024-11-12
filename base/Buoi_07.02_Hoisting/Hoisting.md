@@ -55,3 +55,20 @@ a = 10;
 ## Arrow function:
 
 -> không có tính hoisting
+
+## Hoisting
+
+-> là một thuật ngữ trong Javascript dùng để miêu tả cách Javascript
+đưa những khai báo (declaration) biến (variable) và hàm (function)
+lên đầu đoạn code của chúng ta (có thể là global scope hoặc functional scope).
+Nói sâu xa hơn là những khai báo biến và hàm được đặt vào trong bộ nhớ trong suốt
+giai đoạn biên dịch nhưng ở chính xác nơi chúng ta viết lệnh
+(có nghĩa là Javascript không chỉnh sửa code của chúng ta
+mà nó giống như một cơ chế ưu
+tiên xử lý định nghĩa hàm và biến hơn).
+
+## Hoisting
+
+-> được thực thi khi chúng ta khai báo biến (Variable Hoisting)
+bằng cách dùng var, let, const (có một chút khác nhau giữa hoisting var và bộ đôi let, const) và
+khi chúng ta khai báo hàm (Function Hoisting).
