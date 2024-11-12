@@ -2,8 +2,13 @@
 
 ## Module
 
--> Là 1 file javascript bình thường chỉ đơn giản là file đó được đặt 1 cái tên có nghĩa và các dòng code bên trong thức hiện chức năng đó
--> Việc phân chia thành từng module và mỗi module sẽ có 1 công dụng giúp cho quá trình code nhanh hơn, mạch lạc, tái sử dụng ở nhiều nơi
+-> Là 1 file javascript bình thường chỉ đơn giản là file
+đó được đặt 1 cái tên có nghĩa và các dòng code bên
+trong thức hiện chức năng đó
+
+-> Việc phân chia thành từng module và mỗi module
+sẽ có 1 công dụng giúp cho quá trình code nhanh hơn, mạch lạc,
+tái sử dụng ở nhiều nơi
 
 ## Khai báo module trong JavaScript
 
@@ -34,7 +39,9 @@
 
 ## Default export
 
--> Là cách khai báo một dữ liệu export mặc định trong trường hợp gọi đến một hàm hoặc một biến mà ko tồn tại trong module
+-> Là cách khai báo một dữ liệu export mặc định
+trong trường hợp gọi đến một hàm hoặc một biến
+mà ko tồn tại trong module
 -> trả về kiểu dữ liệu default này
 
 # Cú pháp:

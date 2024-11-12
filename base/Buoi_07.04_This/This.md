@@ -4,7 +4,8 @@
 
 -> Từ khóa "this" sẻ trỏ về đối tượng mà nó đang thuộc về
 -> Trong javascript có thể đặt this ngay cấp ngoài cùng cảu chương trình
--> Vì đối tượng cao nhất chính là "window" -> nên kết quả "this" sẻ trỏ đến đối tượng window
+-> Vì đối tượng cao nhất chính là "window"
+-> nên kết quả "this" sẻ trỏ đến đối tượng window
 
 ## This trong function
 

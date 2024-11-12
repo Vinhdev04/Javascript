@@ -23,7 +23,9 @@ a = 10;
 
 ## từ khóa "var" -> có tính hoisting và nếu biến chưa gán giá trị -> "undefined"
 
-### "let" và "const" nếu chưa gán giá trị -> xuất hiện lỗi ".. is not defined" -> lỗi chưa được định nghĩa
+### "let" và "const" nếu chưa gán giá trị
+
+# -> xuất hiện lỗi ".. is not defined" -> lỗi chưa được định nghĩa
 
 ## Example:
 
@@ -39,7 +41,8 @@ console.log(a); -> undefined
 a = 10;
 
 const a;
-console.log(a); -> error " Missing initializer in const declaration" -> ko được gán giá trị const
+console.log(a); -> error " Missing initializer in const declaration"
+-> ko được gán giá trị const
 a = 10;
 
 ### --------------- function Hoisting ---------------
