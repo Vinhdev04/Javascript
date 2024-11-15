@@ -70,6 +70,8 @@
 
 # 15. Import / export modules music
 
+# 16. LocalStorage
+
 ### Tài liệu sử dụng
 
 # animate api

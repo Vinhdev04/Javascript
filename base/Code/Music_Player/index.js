@@ -1,6 +1,9 @@
 import data from "./database/listMusic.js";
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
+
+const PLAYER_STORAGE_KEY = "PLAYER_V4";
+
 const heading = $(".title");
 const thumb = $(".cd-thumb");
 const audio = $("#audio");
@@ -28,8 +31,17 @@ const apps = {
   isPlaying: false,
   isRandom: false,
   isRepeat: false,
+
   // import từ database
   songs: data.songs,
+
+  // lưu vào Storage
+  config: JSON.parse(localStorage.getItem("PLAYER_STORAGE_KEY")) || {},
+  setConfig: function (key, value) {
+    this.config[key] = value;
+    localStorage.setItem(PLAYER_STORAGE_KEY, JSON.stringify(this.config));
+  },
+
   // hàm xử lý sự kiện
   handleEvents: function () {
     // #TASK02: Scroll
@@ -127,6 +139,7 @@ const apps = {
 
     // xử lý sự kiện phát ngẫu nhiên bài
     randomBtn.onclick = function () {
+      apps.setConfig("isRandom", apps.isRandom);
       apps.isRandom = !apps.isRandom;
       randomBtn.classList.toggle("active", apps.isRandom);
     };
@@ -142,6 +155,7 @@ const apps = {
 
     // #TASK07: Repeat lại bài hát
     repeatBtn.onclick = function () {
+      apps.setConfig("isRandom", apps.isRandom);
       apps.isRepeat = !apps.isRepeat;
       repeatBtn.classList.toggle("active", apps.isRepeat);
     };
@@ -230,6 +244,9 @@ const apps = {
 
   // chạy chương trình gọi hàm start()
   start: function () {
+    // cấu hình từ config vào apps
+    this.loadConfig();
+
     // định nghĩa các thuộc tính Obj
     this.defineProperties();
 
@@ -243,6 +260,10 @@ const apps = {
 
     // hiển thị bài hát hiện tại
     this.renderCurrentSong();
+
+    // hiển thị trạng thái ban đầu của button reapeat và random
+    randomBtn.classList.toggle("active", apps.isRandom);
+    repeatBtn.classList.toggle("active", apps.isRepeat);
   },
 
   // #TASK 01: render ra giao diện
@@ -323,6 +344,12 @@ const apps = {
         block: "center",
       });
     }, 300);
+  },
+
+  // load config
+  loadConfig: function () {
+    this.isRandom = this.config.isRandom;
+    this.isRepeat = this.config.isRepeat;
   },
 };
 
