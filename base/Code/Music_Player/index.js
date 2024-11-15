@@ -10,6 +10,10 @@ const nextBtn = $(".btn-next");
 const prevBtn = $(".btn-prev");
 const randomBtn = $(".btn-random");
 const repeatBtn = $(".btn-repeat");
+const inputSearch = $(".input-search");
+const searchSong = $(".search-music");
+const volumeBtn = $(".btn-volume");
+const muteBtn = $(".btn-mute");
 // DÙNG ĐỂ RENDER RA GIAO DIỆN
 const apps = {
   currentIndex: 0,
@@ -130,6 +134,7 @@ const apps = {
         // cập nhật thanh tiến độ khi play music
         const percent = Math.floor((audio.currentTime / audio.duration) * 100);
         progress.value = percent;
+        progress.style.background = `linear-gradient(to right, red ${percent}%, #e0e0e0 ${percent}%)`;
       }
     };
 
@@ -181,6 +186,36 @@ const apps = {
       apps.isRepeat = !apps.isRepeat;
       repeatBtn.classList.toggle("active", apps.isRepeat);
     };
+
+    inputSearch.onclick = function (e) {
+      searchSong.classList.toggle("active");
+    };
+
+    // Lắng nghe sự kiện click cho volumeBtn
+    volumeBtn.addEventListener("click", function () {
+      // Thay đổi trạng thái mute của audio
+      audio.muted = !audio.muted;
+
+      // Ẩn volumeBtn và hiển thị muteBtn
+      volumeBtn.style.display = "none";
+      muteBtn.style.display = "block";
+
+      // Cập nhật trạng thái của volumeBtn (active) dựa trên trạng thái mute
+      volumeBtn.classList.toggle("active", audio.muted);
+    });
+
+    // Lắng nghe sự kiện click cho muteBtn
+    muteBtn.addEventListener("click", function () {
+      // Bỏ mute audio
+      audio.muted = false;
+
+      // Ẩn muteBtn và hiển thị volumeBtn
+      muteBtn.style.display = "none";
+      volumeBtn.style.display = "block";
+
+      // Loại bỏ trạng thái active của volumeBtn khi bỏ mute
+      volumeBtn.classList.remove("active");
+    });
   },
 
   // lay ra bai hat

@@ -61,6 +61,65 @@ body {
 header {
   text-align: center;
   margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .content {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-top {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  transition: 0.4s all linear;
+}
+
+.header-top .input-search {
+  background-color: #f2f2f2;
+  width: 100%;
+  padding: 10px 18px;
+  border-top-right-radius: 18px;
+  border-top-left-radius: 18px;
+  border: none;
+  outline: none;
+}
+
+.header-top .search-music {
+  position: absolute;
+  top: 101%;
+  width: 100%;
+  min-height: 100px;
+  max-height: 250px;
+  background-color: #f2f2f2;
+  z-index: 1;
+  border-bottom-right-radius: 18px;
+  border-bottom-left-radius: 18px;
+  display: none;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.header-top .search-music.active {
+  display: block;
+}
+
+.header-top .btn-search {
+  padding: 15px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+}
+
+header {
+  transition: 0.4s all linear;
 }
 
 header h4 {
@@ -72,6 +131,22 @@ header h2.title {
   color: var(--text-color);
   font-size: 24px;
   font-weight: 900;
+}
+
+.btn-volume,
+.btn-ellipsis,
+.btn-mute {
+  cursor: pointer;
+  font-weight: 900;
+  color: #000;
+  padding: 15px 15px;
+  transition: 0.4s all linear;
+}
+
+.btn-volume:hover,
+.btn-ellipsis:hover,
+.btn-mute {
+  opacity: 0.8;
 }
 
 /* CD */
@@ -146,6 +221,7 @@ header h2.title {
   -webkit-transition: 0.2s;
   transition: opacity 0.2s;
   cursor: pointer;
+  border-radius: 50px;
 }
 
 .progress::-webkit-slider-thumb {
@@ -197,6 +273,12 @@ header h2.title {
   transition: 0.2s all linear;
 }
 
+.songs .songs-option i:active {
+  transition: 0.2s all linear;
+  color: red;
+  font-weight: bold;
+}
+
 .songs .songs-option i:hover {
   color: rgb(36, 179, 55);
   font-weight: bold;
@@ -214,6 +296,7 @@ header h2.title {
 .songs.active .songs-author,
 .songs-title {
   color: #fff;
+  font-weight: bold;
 }
 
 .songs:active {
@@ -226,6 +309,7 @@ header h2.title {
 .songs.active .songs-author,
 .songs.active .songs-title {
   color: #fff !important;
+  font-weight: bold;
 }
 
 .songs .songs-option__menu {

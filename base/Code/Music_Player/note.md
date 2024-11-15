@@ -46,13 +46,24 @@
 
 # 8. Active song
 
+-> bổ sung css active
 -> Khi next thì active
 
 # 9. Scroll active song to view
 
 # 10. Play when user clicks
 
-### Tìa liệu sử dụng
+# Task Expend
+
+# 11. Input search list music
+
+# 12. On / off mute music
+
+# 13. Show list music when user clicks add music
+
+# 14. Custom dark mode theme
+
+### Tài liệu sử dụng
 
 # animate api
 
@@ -61,3 +72,7 @@
 # methods for audio
 
 -> https://www.w3schools.com/tags/ref_av_dom.asp
+
+# scroll into view
+
+->
