@@ -149,6 +149,7 @@ const apps = {
         apps.nextSong();
       }
       audio.play();
+      apps.render();
     };
 
     prevBtn.onclick = function () {
@@ -208,7 +209,7 @@ const apps = {
   render: function () {
     const music = this.songs.map((song, index) => {
       return `
-            <div class="songs ">
+            <div class="songs ${index === this.currentIndex ? "active" : ""} ">
               <div
                 class="songs-thumb"
                 style="background-image: url('${song.image}')"
