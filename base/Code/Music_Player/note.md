@@ -8,9 +8,22 @@
 
 # 1. Render songs
 
+-> Get elements
+-> Render songs
+
 # 2. Scroll
 
-# 3. Play / pause / seek
+-> Scroll -> hidden thumb cd
+-> Get opacity -
+
+# 3. Play / pause / update tiem progress
+
+-> Tính thời gian: (currentTime / duration ) \* 100
+-> xử lý sự kiện tua thanh progress
+-> Use Methods: pause / play audio DOM js
+-> Use Methods: timeupdate() -> Kích hoạt khi vị trí phát lại hiện tại đã thay đổi
+-> Use Methods: currentTime() -> trả về thời gian tính bằng giây (s)
+-> Use Methods: duration() ->Trả về độ dài của âm thanh/video hiện tại (tính bằng giây)
 
 # 4. Rotate CD
 
