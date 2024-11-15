@@ -42,7 +42,11 @@
 
 # 7. Next / Repeat when ended
 
+-> Khi click repeat -> repeat bài hát trong list
+
 # 8. Active song
+
+-> Khi next thì active
 
 # 9. Scroll active song to view
 

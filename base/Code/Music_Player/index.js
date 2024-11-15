@@ -15,6 +15,7 @@ const apps = {
   currentIndex: 0,
   isPlaying: false,
   isRandom: false,
+  isRepeat: false,
   songs: [
     {
       name: "Ức Chế",
@@ -164,6 +165,21 @@ const apps = {
       apps.isRandom = !apps.isRandom;
       randomBtn.classList.toggle("active", apps.isRandom);
     };
+
+    // xử lý sự kiện next khi hết bài
+    audio.onended = function () {
+      if (apps.isRepeat) {
+        audio.play();
+      } else {
+        nextBtn.click();
+      }
+    };
+
+    // #TASK07: Repeat lại bài hát
+    repeatBtn.onclick = function () {
+      apps.isRepeat = !apps.isRepeat;
+      repeatBtn.classList.toggle("active", apps.isRepeat);
+    };
   },
 
   // lay ra bai hat
@@ -190,9 +206,9 @@ const apps = {
 
   // #TASK 01: render ra giao diện
   render: function () {
-    const music = this.songs.map((song) => {
+    const music = this.songs.map((song, index) => {
       return `
-            <div class="songs">
+            <div class="songs ">
               <div
                 class="songs-thumb"
                 style="background-image: url('${song.image}')"
