@@ -27,6 +27,10 @@
 
 # 4. Rotate CD
 
+-> Get animate in js (animate API)
+-> Khi stop rotate cd -> stop ở đâu thì phải dừng đúng đoạn music đang phát
+-> khi start apps -> default: pause()
+
 # 5. Next song / Prev song
 
 # 6. Random song
@@ -38,3 +42,13 @@
 # 9. Scroll active song to view
 
 # 10. Play when user clicks
+
+### Tìa liệu sử dụng
+
+# animate api
+
+-> https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API
+
+# methods for audio
+
+-> https://www.w3schools.com/tags/ref_av_dom.asp

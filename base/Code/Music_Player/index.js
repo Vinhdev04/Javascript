@@ -104,6 +104,19 @@ const apps = {
     const cd = $(".cd");
     const cdWidth = cd.offsetWidth;
     const _this = this;
+
+    // #TASK04: xử lý rotate cd
+    const thumbAnimate = thumb.animate(
+      {
+        transform: "rotate(360deg",
+      },
+      {
+        duration: 10000, // 10000ms = 10s
+        iterations: Infinity, // lặp vô hạn
+      }
+    );
+    thumbAnimate.pause(); // khi start apps -> default: pause()
+
     document.onscroll = function () {
       // console.log(window.scrollY);
       const scrollTop = window.scrollY || document.documentElement.scrollTop;
@@ -132,12 +145,14 @@ const apps = {
     audio.onplay = function () {
       apps.isPlaying = true;
       player.classList.add("playing");
+      thumbAnimate.play();
     };
 
     // khi pause music
     audio.onpause = function () {
       apps.isPlaying = false;
       player.classList.remove("playing");
+      thumbAnimate.pause();
     };
 
     // cập nhật thanh progress khi music đang chạy
