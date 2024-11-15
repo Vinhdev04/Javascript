@@ -51,7 +51,12 @@
 
 # 9. Scroll active song to view
 
+-> add scrollIntoView()
+
 # 10. Play when user clicks
+
+-> add class "active"
+-> sử dụng HTML DOM Element closest() Method
 
 # Task Expend
 
@@ -63,11 +68,17 @@
 
 # 14. Custom dark mode theme
 
+# 15. Import / export modules music
+
 ### Tài liệu sử dụng
 
 # animate api
 
 -> https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API
+
+# box-shadow
+
+-> https://getcssscan.com/css-box-shadow-examples
 
 # methods for audio
 
@@ -75,4 +86,8 @@
 
 # scroll into view
 
-->
+-> https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView
+
+# HTML DOM Element closest() Method
+
+-> https://www.w3schools.com/jsref/met_element_closest.asp

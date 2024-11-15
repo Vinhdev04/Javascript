@@ -1,3 +1,4 @@
+import data from "./database/listMusic.js";
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 const heading = $(".title");
@@ -10,67 +11,25 @@ const nextBtn = $(".btn-next");
 const prevBtn = $(".btn-prev");
 const randomBtn = $(".btn-random");
 const repeatBtn = $(".btn-repeat");
+const playList = $(".playlist");
 const inputSearch = $(".input-search");
 const searchSong = $(".search-music");
 const volumeBtn = $(".btn-volume");
 const muteBtn = $(".btn-mute");
+const optionsBtn = $(".btn-ellipsis");
+const options = $(".option-list");
+const darkMode = $(".option-themes");
+const addFavorite = $(".add-favorite");
+console.log(addFavorite);
+
 // DÙNG ĐỂ RENDER RA GIAO DIỆN
 const apps = {
   currentIndex: 0,
   isPlaying: false,
   isRandom: false,
   isRepeat: false,
-  songs: [
-    {
-      name: "Ức Chế",
-      singer: "Karik",
-      path: "./assets/music/UcChe.mp3",
-      image: "./assets/Images/Karik_3.jpg",
-    },
-    {
-      name: "Trình",
-      singer: "Hiếu Thứ Hai",
-      path: "./assets/music/Song02.mp3",
-      image: "./assets/Images/background03.jpg",
-    },
-    {
-      name: "Cao Ốc 20",
-      singer: "Bray",
-      path: "./assets/music/CaoOc20.mp3",
-      image: "./assets/Images/bray.jpg",
-    },
-    {
-      name: "Khu Tao Sống",
-      singer: "Karik if Wowy",
-      path: "./assets/music/KhuTaoSong.mp3",
-      image: "./assets/Images/karikifwowy.jpg",
-    },
-    {
-      name: "Ghé Qua",
-      singer: "Huỳnh Công Hiếu",
-      path: "./assets/music/GheQua.mp3",
-      image: "./assets/Images/ghequa.jpg",
-    },
-    {
-      name: "Trên Mặt Nước",
-      singer: "Lil Shady",
-      path: "./assets/music/TrenMatNuoc.mp3",
-      image: "./assets/Images/lilShady.jpg",
-    },
-    {
-      name: "Lạ Lùng",
-      singer: "Vũ",
-      path: "./assets/music/Song01.mp3",
-      image: "./assets/Images/background01.jpg",
-    },
-    {
-      name: "Đố Em Biết",
-      singer: "Vũ if Đen",
-      path: "./assets/music/Song03.mp3",
-      image: "./assets/Images/background02.jpg",
-    },
-  ],
-
+  // import từ database
+  songs: data.songs,
   // hàm xử lý sự kiện
   handleEvents: function () {
     // #TASK02: Scroll
@@ -187,6 +146,31 @@ const apps = {
       repeatBtn.classList.toggle("active", apps.isRepeat);
     };
 
+    // Lắng nghe sự kiện click trong playlist
+    playList.onclick = function (e) {
+      // Tìm phần tử .songs gần nhất mà không có lớp active
+      const songTmp = e.target.closest(".songs:not(.active)");
+
+      // Kiểm tra khi click vào một bài hát hoặc vào tùy chọn
+      if (songTmp || e.target.closest(".songs-option")) {
+        // Nếu là một bài hát mà không có lớp active
+        if (songTmp) {
+          // console.log(songTmp.getAttribute("data-index"));
+          // console.log(songTmp.dataset.index);
+          apps.currentIndex = Number(songTmp.dataset.index);
+          apps.renderCurrentSong();
+          apps.render();
+          audio.play();
+        }
+
+        // Nếu là tùy chọn của bài hát
+        if (e.target.closest(".songs-option")) {
+          console.log("Clicked on song option");
+        }
+      }
+    };
+
+    // xử lý sự kiện search bài hát
     inputSearch.onclick = function (e) {
       searchSong.classList.toggle("active");
     };
@@ -216,6 +200,27 @@ const apps = {
       // Loại bỏ trạng thái active của volumeBtn khi bỏ mute
       volumeBtn.classList.remove("active");
     });
+
+    // Lắng nghe sự kiện click trên optionsBtn
+    optionsBtn.addEventListener("click", function (e) {
+      // Ngăn không cho sự kiện click trên optionsBtn được truyền lên phía trên
+      e.stopPropagation();
+
+      // Kiểm tra nếu options đang hiển thị hay không
+      const isVisible = options.style.display === "block";
+
+      // Nếu options đang hiển thị, đóng nó; nếu không, mở nó
+      options.style.display = isVisible ? "none" : "block";
+    });
+
+    // Lắng nghe sự kiện click trên toàn bộ trang để đóng options nếu click ra ngoài
+    document.addEventListener("click", function (e) {
+      // Kiểm tra xem click có xảy ra ngoài optionsBtn và options không
+      if (!optionsBtn.contains(e.target) && !options.contains(e.target)) {
+        // Đóng options nếu click ra ngoài
+        options.style.display = "none";
+      }
+    });
   },
 
   // lay ra bai hat
@@ -244,19 +249,20 @@ const apps = {
   render: function () {
     const music = this.songs.map((song, index) => {
       return `
-            <div class="songs ${index === this.currentIndex ? "active" : ""} ">
-              <div
-                class="songs-thumb"
-                style="background-image: url('${song.image}')"
-              ></div>
-              <div class="songs-body">
-                <h3 class="songs-title">${song.name}</h3>
-                <p class="songs-author">${song.singer}</p>
-              </div>
-              <div class="songs-option">
-              <i class="fa-regular fa-heart"></i>
-              </div>
+          <div class="songs ${
+            index === this.currentIndex ? "active" : ""
+          }" data-index="${index}">
+            <div class="songs-thumb" style="background-image: url('${
+              song.image
+            }')"></div>
+            <div class="songs-body">
+              <h3 class="songs-title">${song.name}</h3>
+              <p class="songs-author">${song.singer}</p>
             </div>
+            <div class="songs-option">
+              <i class="fa-regular fa-heart"></i>
+            </div>
+          </div>
       `;
     });
     const playList = $(".playlist");
@@ -308,6 +314,15 @@ const apps = {
     // console.log(randomMusic);
     this.currentIndex = randomMusic;
     this.renderCurrentSong();
+  },
+
+  scrollTopActiveSong: function () {
+    setTimeout(() => {
+      $(".songs.active").scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+    }, 300);
   },
 };
 
