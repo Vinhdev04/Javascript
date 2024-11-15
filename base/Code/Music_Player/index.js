@@ -6,6 +6,9 @@ const audio = $("#audio");
 const playBtn = $(".btn-toggle-play");
 const player = $(".player");
 const progress = $("#progress");
+const nextBtn = $(".btn-next");
+const prevBtn = $(".btn-prev");
+const randomBtn = $(".btn-random");
 // DÙNG ĐỂ RENDER RA GIAO DIỆN
 const apps = {
   currentIndex: 0,
@@ -171,6 +174,17 @@ const apps = {
       const time = (audio.duration / 100) * tmp;
       audio.currentTime = time;
     };
+
+    // xử lý sự kiện next và prev bài
+    nextBtn.onclick = function () {
+      apps.nextSong();
+      audio.play();
+    };
+
+    prevBtn.onclick = function () {
+      apps.prevSong();
+      audio.play();
+    };
   },
 
   // lay ra bai hat
@@ -233,6 +247,25 @@ const apps = {
     heading.textContent = this.currentSong.name;
     thumb.style.backgroundImage = `url('${this.currentSong.image}')`;
     audio.src = this.currentSong.path;
+  },
+
+  // #TASK05: xử lý sự kiện next và prev bài hát
+  nextSong: function () {
+    this.currentIndex++;
+    console.log(this.currentIndex, this.songs.length);
+
+    if (this.currentIndex >= this.songs.length - 1) {
+      this.currentIndex = 0;
+    }
+    this.renderCurrentSong();
+  },
+
+  prevSong: function () {
+    this.currentIndex--;
+    if (this.currentIndex < 0) {
+      this.currentIndex = this.songs.length - 1;
+    }
+    this.renderCurrentSong();
   },
 };
 

@@ -33,6 +33,9 @@
 
 # 5. Next song / Prev song
 
+-> Xử lý sự kiện click vào button next -> render bài hát trong list songs
+-> Xử lý sự kiện click vào button prev -> render bài hát trong list songs
+
 # 6. Random song
 
 # 7. Next / Repeat when ended
