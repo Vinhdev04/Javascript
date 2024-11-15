@@ -9,10 +9,12 @@ const progress = $("#progress");
 const nextBtn = $(".btn-next");
 const prevBtn = $(".btn-prev");
 const randomBtn = $(".btn-random");
+const repeatBtn = $(".btn-repeat");
 // DÙNG ĐỂ RENDER RA GIAO DIỆN
 const apps = {
   currentIndex: 0,
   isPlaying: false,
+  isRandom: false,
   songs: [
     {
       name: "Ức Chế",
@@ -140,13 +142,27 @@ const apps = {
 
     // xử lý sự kiện next và prev bài
     nextBtn.onclick = function () {
-      apps.nextSong();
+      if (apps.isRandom) {
+        apps.randomSong();
+      } else {
+        apps.nextSong();
+      }
       audio.play();
     };
 
     prevBtn.onclick = function () {
-      apps.prevSong();
+      if (apps.isRandom) {
+        apps.randomSong();
+      } else {
+        apps.prevSong();
+      }
       audio.play();
+    };
+
+    // xử lý sự kiện phát ngẫu nhiên bài
+    randomBtn.onclick = function () {
+      apps.isRandom = !apps.isRandom;
+      randomBtn.classList.toggle("active", apps.isRandom);
     };
   },
 
@@ -228,6 +244,17 @@ const apps = {
     if (this.currentIndex < 0) {
       this.currentIndex = this.songs.length - 1;
     }
+    this.renderCurrentSong();
+  },
+
+  // #TASK06: Random music
+  randomSong: function () {
+    let randomMusic;
+    do {
+      randomMusic = Math.floor(Math.random() * this.songs.length);
+    } while (randomMusic === this.currentIndex);
+    // console.log(randomMusic);
+    this.currentIndex = randomMusic;
     this.renderCurrentSong();
   },
 };

@@ -38,6 +38,8 @@
 
 # 6. Random song
 
+-> Random ngẫu nhiên bài phải khác bài đang active
+
 # 7. Next / Repeat when ended
 
 # 8. Active song
