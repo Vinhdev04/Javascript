@@ -72,7 +72,7 @@
 
 # 16. LocalStorage
 
-### Tài liệu sử dụng
+### Research
 
 # animate api
 
@@ -93,3 +93,7 @@
 # HTML DOM Element closest() Method
 
 -> https://www.w3schools.com/jsref/met_element_closest.asp
+
+# Gradien
+
+-> https://cssgradient.io/gradient-backgrounds/

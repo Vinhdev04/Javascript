@@ -7,10 +7,24 @@
 }
 
 :root {
-  --primary-color: #ec1f55;
-  --text-color: #333;
+  /* --primary-color: #ec1f55; */
+  /* --text-color: #333; */
+  --base-color: #fff;
+  --base-variant: #e8e9ed;
+  --text-color: #111528;
+  --secondary-text: #232738;
+  --primary-color: #3a435d;
+  --accent-color: #0071ff;
 }
 
+.darkmode {
+  --base-color: #070b1d;
+  --base-variant: #101425;
+  --text-color: #fff;
+  --secondary-text: #a4a58b;
+  --primary-color: #3a435d;
+  --accent-color: #0071ff;
+}
 html {
   box-sizing: border-box;
   font-family: "Lora", serif;
@@ -24,7 +38,7 @@ html {
 }
 
 body {
-  background-color: #efefef;
+  background-image: linear-gradient(-225deg, #a8bfff 0%, #884d80 100%);
 }
 
 .dark {
@@ -56,12 +70,12 @@ body {
 
 .dashboard {
   padding: 16px 16px 14px;
-  background-color: #fff;
+  background-color: var(--base-color);
   position: fixed;
   top: 0;
   width: 100%;
   max-width: 480px;
-  border-bottom: 1px solid #ebebeb;
+  border-bottom: 1px solid var(--accent-color);
   z-index: 999;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
     rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
@@ -94,13 +108,11 @@ header .content {
 }
 
 .header-top .input-search {
-  background-color: #f2f2f2;
   width: 100%;
   padding: 10px 18px;
-  /* border-top-right-radius: 18px;
-  border-top-left-radius: 18px; */
   border: none;
   outline: none;
+  background-color: var(--secondary-text);
 }
 
 .header-top .search-music {
@@ -109,17 +121,24 @@ header .content {
   width: 100%;
   min-height: 100px;
   max-height: 250px;
-  background-color: #f2f2f2;
+  background-color: var(--base-variant);
   z-index: 1;
   border-bottom-right-radius: 18px;
   border-bottom-left-radius: 18px;
   display: none;
   overflow-y: auto;
   overscroll-behavior: contain;
+  color: #fff;
 }
 
 .header-top .search-music.active {
   display: block;
+  background: var(--base-color);
+}
+
+.darkmode .header-top .search-music.active {
+  display: block;
+  background: var(--secondary-text);
 }
 
 .header-top .btn-search {
@@ -135,7 +154,7 @@ header {
 }
 
 header h4 {
-  color: var(--primary-color);
+  color: var(--secondary-text);
   font-size: 12px;
 }
 
@@ -150,7 +169,7 @@ header h2.title {
 .btn-mute {
   cursor: pointer;
   font-weight: 900;
-  color: #000;
+  color: var(--text-color);
   padding: 15px 15px;
   transition: 0.4s all linear;
 }
@@ -170,11 +189,12 @@ header h2.title {
   width: 140px;
   top: 100%;
   right: -32%;
-  background-color: #fff;
+  /* background-color: var(--base-color); */
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   z-index: 1;
+  background-color: var(--secondary-text);
 }
 
 .option .option-list .option-themes,
@@ -183,24 +203,44 @@ header h2.title {
   padding: 8px;
   cursor: pointer;
   /* user-select: none; */
+  color: #fff;
 }
 
 .option-themes span {
   margin-right: 10px;
 }
 
+body.darkmode .option-list .option-themes:hover,
+body.darkmode .option-list .option-items:hover {
+  opacity: 0.8;
+  background-color: var(--base-color);
+  color: #fff;
+}
+
 .option-list .option-themes:hover,
 .option-list .option-items:hover {
   opacity: 0.8;
-  background-color: #f3f3f3;
+  background-color: #000;
+  color: var(--base-color);
 }
 
 .option-list .option-themes:active,
 .option-list .option-items:active {
   background-color: cadetblue;
-  color: #fff;
+  color: var(--base-color);
 }
 
+.option-themes i:last-child {
+  display: none;
+}
+
+.darkmode .option-themes i:first-of-type {
+  display: none;
+}
+
+.darkmode .option-themes i:last-of-type {
+  display: inline-flex;
+}
 /* CD */
 .cd {
   display: flex;
@@ -212,7 +252,7 @@ header h2.title {
   width: 100%;
   padding-top: 100%;
   border-radius: 50%;
-  background-color: #333;
+  background-color: var(--text-color);
   background-size: cover;
   margin: auto;
 }
@@ -231,7 +271,7 @@ header h2.title {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #666;
+  color: var(--text-color);
   font-size: 18px;
   border-radius: 50%;
   cursor: pointer;
@@ -247,7 +287,7 @@ header h2.title {
 }
 
 .control .btn.active {
-  color: var(--primary-color);
+  color: var(--text-color);
   border: none;
 }
 
@@ -256,7 +296,7 @@ header h2.title {
   height: 56px;
   border-radius: 50%;
   font-size: 24px;
-  color: #fff;
+  color: var(--base-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -267,7 +307,7 @@ header h2.title {
   width: 100%;
   -webkit-appearance: none;
   height: 6px;
-  background: #d3d3d3;
+  background: var(--base-variant);
   outline: none;
   opacity: 0.7;
   -webkit-transition: 0.2s;
@@ -294,13 +334,14 @@ header h2.title {
   padding: 12px 0px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  background: var(--base-color);
 }
 
 .songs {
   display: flex;
   align-items: center;
   margin-bottom: 12px;
-  background-color: #fff;
+  background-color: var(--base-color);
   padding: 8px 16px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -312,12 +353,13 @@ header h2.title {
 .songs:hover {
   background-color: #f5f5f5;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  color: var(--base-color);
 }
 
 .songs .songs-option {
   /* margin-right: 20px; */
   padding: 16px 8px;
-  color: #999;
+  color: var(--base-variant);
   font-size: 20px;
   overflow: hidden;
   transition: 0.2s all linear;
@@ -329,7 +371,7 @@ header h2.title {
 
 .songs .songs-option i:active {
   transition: 0.2s all linear;
-  color: red;
+  color: var(--accent-color);
   font-weight: bold;
 }
 
@@ -339,31 +381,47 @@ header h2.title {
 }
 
 .songs.active {
-  background: #38b8d5;
-  color: #fff;
+  /* background: #38b8d5; */
+  color: var(--base-color);
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  background-image: linear-gradient(
+    -225deg,
+    #473b7b 0%,
+    #3584a7 51%,
+    #0e524a 100%
+  );
+}
+
+.songs-author,
+.songs-title {
+  color: var(--base-color);
 }
 
 .songs-author {
   font-size: 14px;
+  color: var(--base-color);
+}
+
+.songs-title {
+  color: var(--base-color);
 }
 
 .songs.active .songs-author,
 .songs-title {
-  color: #fff;
+  color: var(--base-color);
   font-weight: bold;
 }
 
 .songs:active {
   opacity: 0.8;
   background: #38b8d5;
-  color: #fff;
+  color: var(--base-color);
 }
 
 .songs.active .songs-option,
 .songs.active .songs-author,
 .songs.active .songs-title {
-  color: #fff !important;
+  color: var(--base-color) !important;
   font-weight: bold;
 }
 
@@ -382,8 +440,8 @@ header h2.title {
   display: flex;
   visibility: visible;
   opacity: 1;
-  background: #fff;
-  color: #333;
+  background: var(--base-color);
+  color: var(--base-variant);
   align-items: center;
   justify-content: center;
   border-radius: 5px;
@@ -420,7 +478,8 @@ header h2.title {
 .songs .songs-body .songs-author {
   margin-top: 8px;
   font-size: 12px;
-  color: #999;
+  color: var(--text-color);
+  font-weight: 600;
 }
 
 .add_Song {
@@ -432,13 +491,13 @@ header h2.title {
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  border: 1px solid #eee;
+  border: 1px solid var(--base-variant);
   z-index: 999;
   background: var(--primary-color);
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   user-select: none;
-  color: #eee;
+  color: var(--base-variant);
   font-weight: bold;
   font-size: 20px;
 }

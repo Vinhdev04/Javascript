@@ -1,6 +1,10 @@
 import data from "./database/listMusic.js";
+
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
+
+// Fetch current dark mode setting from localStorage
+let darkmode = localStorage.getItem("darkmode");
 
 const PLAYER_STORAGE_KEY = "PLAYER_V4";
 
@@ -22,9 +26,11 @@ const muteBtn = $(".btn-mute");
 const optionsBtn = $(".btn-ellipsis");
 const options = $(".option-list");
 const darkMode = $(".option-themes");
+const darkIcon = $(".icon-dark");
+const lightIcon = $(".icon-light");
 const addFavorite = $(".add-favorite");
-console.log(addFavorite);
 
+console.log(addFavorite);
 // DÙNG ĐỂ RENDER RA GIAO DIỆN
 const apps = {
   currentIndex: 0,
@@ -44,6 +50,15 @@ const apps = {
 
   // hàm xử lý sự kiện
   handleEvents: function () {
+    darkMode.addEventListener("click", () => {
+      darkmode = localStorage.getItem("darkmode"); // Get the current dark mode setting
+      if (darkmode !== "active") {
+        this.enableDarkMode();
+      } else {
+        this.disableDarkMode();
+      }
+    });
+
     // #TASK02: Scroll
     const cd = $(".cd");
     const cdWidth = cd.offsetWidth;
@@ -105,7 +120,7 @@ const apps = {
         // cập nhật thanh tiến độ khi play music
         const percent = Math.floor((audio.currentTime / audio.duration) * 100);
         progress.value = percent;
-        progress.style.background = `linear-gradient(to right, red ${percent}%, #e0e0e0 ${percent}%)`;
+        progress.style.background = `linear-gradient(to right, #bf9412 ${percent}%, #e0e0e0 ${percent}%)`;
       }
     };
 
@@ -346,10 +361,35 @@ const apps = {
     }, 300);
   },
 
+  enableDarkMode: function () {
+    document.body.classList.add("darkmode");
+    localStorage.setItem("darkmode", "active");
+    localStorage;
+
+    darkIcon.style.display = "inline-block";
+    lightIcon.style.display = "none";
+  },
+
+  disableDarkMode: function () {
+    document.body.classList.remove("darkmode");
+    localStorage.setItem("darkmode", "disabled");
+    localStorage;
+
+    darkIcon.style.display = "none";
+    lightIcon.style.display = "inline-block";
+  },
+
   // load config
   loadConfig: function () {
     this.isRandom = this.config.isRandom;
     this.isRepeat = this.config.isRepeat;
+
+    darkmode = localStorage.getItem("darkmode");
+    if (darkmode === "active") {
+      this.enableDarkMode();
+    } else {
+      this.disableDarkMode();
+    }
   },
 };
 
