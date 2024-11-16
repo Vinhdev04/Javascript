@@ -361,6 +361,7 @@ const apps = {
     }, 300);
   },
 
+  // start dark mode
   enableDarkMode: function () {
     document.body.classList.add("darkmode");
     localStorage.setItem("darkmode", "active");
@@ -370,6 +371,7 @@ const apps = {
     lightIcon.style.display = "none";
   },
 
+  // disible dark mode
   disableDarkMode: function () {
     document.body.classList.remove("darkmode");
     localStorage.setItem("darkmode", "disabled");
