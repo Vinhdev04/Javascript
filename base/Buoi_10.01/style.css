@@ -1,0 +1,77 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: cadetblue;
+}
+
+.container {
+  max-width: 400px;
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+button,
+input {
+  border: none;
+  outline: none;
+}
+
+input {
+  width: 250px;
+  padding: 10px;
+  color: #000;
+  font-weight: 500px;
+  border-radius: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: rgb(26, 93, 156);
+  border-radius: 20px;
+  color: #fff;
+  font-weight: 500px;
+  cursor: pointer;
+  transition: 0.3s all linear;
+  margin: 10px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+#control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#list {
+  background: #fff;
+  margin-top: 10px;
+  width: 250px;
+  height: 200px;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+#list li {
+  margin: 10px 20px;
+  list-style-type: circle;
+}
+
+#control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* place-self: flex-start; */
+  flex-wrap: wrap;
+  max-width: 400px;
+}
