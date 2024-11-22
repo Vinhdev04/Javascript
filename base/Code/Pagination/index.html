@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/Icon/icon16.webp" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- * Category-->
+    <h2 class="title">Category</h2>
+    <div id="category" class="category"></div>
+
+    <!-- * Search -->
+    <div class="search__form" id="search__form">
+      <input
+        type="text"
+        name=""
+        id="search__value"
+        placeholder="Nhập để tìm kiếm"
+        class="search__value"
+        required
+      />
+      <button class="btn">Search</button>
+    </div>
+
+    <!-- * Sort -->
+
+    <!-- * Product -->
+    <div class="wrapper">
+      <h2 class="title">Products</h2>
+      <div class="filter" id="filter">
+        <select name="" id="filter__select" class="filter__option">
+          <option value="default">Default</option>
+          <option value="low-high">Low to High</option>
+          <option value="high-low">High to Low</option>
+          <option value="Rating">Rating</option>
+        </select>
+      </div>
+    </div>
+    <div id="products" class="products"></div>
+
+    <!-- * Pagination -->
+    <div class="pagination" id="pagination">
+      <span class="pagination__prev">Prev</span>
+      <span class="pagination__nums">1</span>
+      <span class="pagination__next">Next</span>
+    </div>
+    <script type="module" src="./js/category.js"></script>
+    <script type="module" src="./js/products.js"></script>
+  </body>
+</html>
