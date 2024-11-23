@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+}
+
+.filter__input {
+  width: 550px;
+  padding: 10px 15px;
+}
+
+.products {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px 20px;
+  background: rgb(64, 26, 102);
+  margin-top: 60px;
+}
+
+.item {
+  margin-top: 50px;
+  overflow: hidden;
+  background: #909c79;
+  padding: 20px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.img {
+  width: 250px;
+  height: 350px;
+  object-fit: cover;
+  object-position: center;
+  background-color: rgb(224, 224, 224);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info__title {
+  text-align: center;
+  margin-top: 10px;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 0.25px;
+  font-size: 24px;
+  max-width: 200px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  word-break: break-all;
+  line-height: 1.5;
+  height: 80px;
+}
+
+.info__desc {
+  text-align: center;
+  color: #aeae;
+}
+
+.info__price {
+  text-align: center;
+  color: orange;
+  font-weight: 500;
+}
+
+.info__control {
+  text-align: center;
+}
+
+.info__btn {
+  padding: 8px 25px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: orange;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 20px;
+  transition: 0.2s all linear;
+}
+
+.info__btn:hover {
+  opacity: 0.8;
+}
+
+.wrapper__filter {
+  float: right;
+  margin-top: 20px;
+}
