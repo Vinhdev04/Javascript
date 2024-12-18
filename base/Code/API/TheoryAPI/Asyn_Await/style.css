@@ -1,0 +1,23 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Courier New", Courier, monospace;
+}
+
+#btn {
+  padding: 10px 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  color: #3315bb;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.4s all ease-in-out;
+}
+
+#btn:hover {
+  transform: translateY(-10px);
+}

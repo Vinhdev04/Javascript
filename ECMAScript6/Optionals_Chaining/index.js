@@ -1,4 +1,4 @@
-// Optional Chaining  (?.)
+// TODO: Optional Chaining  (?.)
 // 1. 1. Truy cập thuộc tính trong đối tượng lồng nhau
 const user = {
   profile: {
@@ -53,7 +53,8 @@ console.log(getUserData(user2)); // undefined (không lỗi)
 if (user && user.profile && user.profile.address) {
   console.log(user.profile.address.city);
 }
-// Nên dùngf:
+
+// Nên dùng:
 console.log(user?.profile?.address?.city); // "New York" hoặc undefined
 
 /*

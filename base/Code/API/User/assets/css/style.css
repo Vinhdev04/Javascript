@@ -1,0 +1,299 @@
+/* ----------------------------- Common -----------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Georgia", sans-serif;
+}
+
+:root {
+  --first-color: hsl(208, 92%, 54%);
+  --first-color-alt: hsl(208, 88%, 50%);
+  --title-color: hsl(220, 68%, 4%);
+  --white-color: #fff;
+  --text-color: hsl(220, 15%, 66%);
+  --body-color: hsl(0, 0%, 100%);
+  --container-color: hsl(220, 50%, 97%);
+
+  --font: "Georgia", sans-serif;
+}
+
+input,
+button {
+  border: 0;
+  outline: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 1120px;
+  margin: 15px;
+}
+
+.grid {
+  display: grid;
+  gap: 10px;
+}
+
+/* ----------------------------- Login -----------------------------*/
+.login {
+  position: relative;
+  height: 100vh;
+  align-items: center;
+  overflow: hidden;
+}
+
+.login__blob {
+  display: none;
+}
+
+.login__title {
+  font-size: 40px;
+  color: var(--title-color);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.login__box {
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-color: var(--container-color);
+  border-radius: 10px;
+}
+
+.login__input {
+  background: none;
+  width: 100%;
+  padding: 15px 25px 15px 12px;
+  border-radius: 10px;
+  font-family: var(--font);
+  border: 3px solid transparent;
+  z-index: 1;
+  transition: border-color 0.4s;
+}
+
+.login__input:autofill {
+  transition: background-color 6000s, color 6000s;
+}
+
+.login__label {
+  position: absolute;
+  left: 12px;
+  font-weight: 400;
+  transition: 0.4s all linear;
+}
+
+.login__icon {
+  position: absolute;
+  right: 10px;
+  font-size: 16px;
+}
+
+.login__pass {
+  cursor: pointer;
+  z-index: 10;
+  transition: 0.4s all linear;
+}
+
+.login__forgot {
+  display: block;
+  max-width: max-content;
+  margin: 10px 0 0 auto;
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: 18px;
+  transition: 0.4s all linear;
+  margin-bottom: 20px;
+}
+
+.login__forgot:hover {
+  color: var(--first-color);
+}
+
+.login__btn {
+  display: inline-flex;
+  width: 100%;
+  background-color: var(--first-color);
+  color: var(--white-color);
+  justify-content: center;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.4s all linear;
+  margin-bottom: 20px;
+  /* margin-top: 20px; */
+}
+
+.login__btn:hover {
+  background-color: var(--first-color-alt);
+  box-shadow: 0 8px 24px hsl(208, 92%, 32%, 0.3);
+}
+
+.login__social {
+  margin-bottom: 20px;
+}
+
+.login__social--title {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--title-color);
+}
+
+.login__social-img {
+  width: 20px;
+}
+
+.login__social--links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 15px;
+}
+
+.login__social--link {
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: var(--body-color);
+  display: grid;
+  place-items: center;
+  box-shadow: 0 4px 8px hsla(0, 0%, 0%, 0.1);
+  transition: 0.4s all linear;
+  border: transparent;
+}
+
+.login__social--link:hover {
+  transform: translateY(-5px);
+}
+
+.login__switch {
+  text-align: center;
+  font-size: 18px;
+}
+
+.login__switch button {
+  background: none;
+  color: var(--first-color);
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s all linear;
+}
+
+.login__switch button:hover {
+  color: var(--first-color-alt);
+  opacity: 0.8;
+}
+
+.login__input:focus ~ .login__label {
+  transform: translateY(-10px);
+  font-size: 13px;
+}
+
+.login__input:focus {
+  padding-block: 20px 10px;
+}
+
+.login__input:not(:placeholder-shown).login__input:not(:focus) ~ .login__label {
+  transform: translateY(-10px);
+  font-size: 13px;
+}
+
+.login__input:not(:placeholder-shown).login__input:not(:focus) {
+  padding-block: 20px 10px;
+}
+
+.login__input:focus {
+  border-color: var(--first-color);
+}
+
+.login__input:focus ~ .login__icon,
+.login__input:focus ~ .login__label {
+  color: var(--first-color);
+}
+
+/*  Handle show/hide form */
+.login__access,
+.login__register {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  transition: transform 0.4s, opacity 0.4s 0.1s;
+}
+
+.login__register {
+  transform: translateX(450px);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.active .login__access {
+  transform: translateX(450px);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.active .login__register {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: inherit;
+}
+
+/* Responsive */
+@media screen and (max-width: 320px) {
+  .container {
+    margin-inline: 10px;
+    margin-top: -50px;
+  }
+  .login__btn {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (min-width: 540px) {
+  .login__area {
+    max-width: 380px;
+    margin: auto;
+  }
+
+  .login__btn {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (min-width: 350px) and (max-height: 600px) {
+  .login {
+    height: 760px;
+  }
+}
+
+@media screen and (min-width: 1140px) {
+  .login__blob {
+    display: block;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    position: absolute;
+  }
+
+  .login__img {
+    transform: translate(0, 0);
+  }
+}
